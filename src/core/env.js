@@ -116,12 +116,12 @@ const defaults = new Map(
     // primary doh upstream
     CF_DNS_RESOLVER_URL: {
       type: "string",
-      default: "https://dns.quad9.net/dns-query",
+      default: "https://1.1.1.1/dns-query",
     },
     // secondary doh upstream
     CF_DNS_RESOLVER_URL_2: {
       type: "string",
-      default: "https://cloudflare-dns.com/dns-query",
+      default: "https://1.0.0.1/dns-query",
     },
     // upstream recursive rethinkdns resolver running on Fly.io
     MAX_DNS_RESOLVER_URL: {
@@ -133,17 +133,17 @@ const defaults = new Map(
     // for blocklists to download before being responded to.
     WORKER_TIMEOUT: {
       type: "number",
-      default: "10000", // 10s
+      default: "5000", // 10s
     },
     // max blocklist files download timeout
     CF_BLOCKLIST_DOWNLOAD_TIMEOUT: {
       type: "number",
-      default: "7500", // 7.5s
+      default: "5000", // 7.5s
     },
     // ttl for dns answers, overrides ttls in dns answers
     CACHE_TTL: {
       type: "number",
-      default: "1800", // 30m
+      default: "3600", // 30m
     },
     // disable downloading blocklists altogether
     DISABLE_BLOCKLISTS: {
