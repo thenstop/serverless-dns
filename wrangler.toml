@@ -25,6 +25,8 @@ type = "ESModule"
 globs = ["**/*.js"]
 
 [vars]
+CF_DNS_RESOLVER_URL = "https://1.1.1.1/dns-query"
+CF_DNS_RESOLVER_URL_2 = "https://1.0.0.1/dns-query"
 LOG_LEVEL = "debug"
 WORKER_ENV = "development"
 CLOUD_PLATFORM = "cloudflare"
@@ -48,6 +50,8 @@ routes = [
 ]
 # vars are not inherited
 # workers/platform/environment-variables#environment-variables-via-wrangler
+CF_DNS_RESOLVER_URL = "https://1.1.1.1/dns-query"
+CF_DNS_RESOLVER_URL_2 = "https://1.0.0.1/dns-query"
 [env.prod.vars]
 LOG_LEVEL = "info"
 WORKER_ENV = "production"
@@ -71,6 +75,8 @@ analytics_engine_datasets = [
 
 [env.one.vars]
 # just the error and request logs
+CF_DNS_RESOLVER_URL = "https://1.1.1.1/dns-query"
+CF_DNS_RESOLVER_URL_2 = "https://1.0.0.1/dns-query"
 LOG_LEVEL = "logpush"
 WORKER_ENV = "production"
 CLOUD_PLATFORM = "cloudflare"
